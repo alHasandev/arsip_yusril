@@ -1,32 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 18, 2022 at 03:56 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `pt_baktiputra`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `adendum`
---
 
 CREATE TABLE `adendum` (
   `nomor` varchar(1000) NOT NULL,
@@ -37,11 +9,10 @@ CREATE TABLE `adendum` (
   `lain` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `adm_kredit`
---
+
+
+
 
 CREATE TABLE `adm_kredit` (
   `nomor` varchar(1000) NOT NULL,
@@ -53,11 +24,10 @@ CREATE TABLE `adm_kredit` (
   `penjamin` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `ao_kredit`
---
+
+
+
 
 CREATE TABLE `ao_kredit` (
   `nomor` varchar(1000) NOT NULL,
@@ -70,18 +40,12 @@ CREATE TABLE `ao_kredit` (
   `analisa` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `ao_kredit`
---
 
-INSERT INTO `ao_kredit` (`nomor`, `nama`, `slik`, `survei`, `usaha`, `tanah`, `nilai`, `analisa`) VALUES
-('46546546546875896', 'yusril', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf');
+INSERT INTO ao_kredit VALUES
+("46546546546875896","yusril","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_intern`
---
+
 
 CREATE TABLE `cs_intern` (
   `nomor` varchar(1000) NOT NULL,
@@ -98,11 +62,10 @@ CREATE TABLE `cs_intern` (
   `npwp` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_kendaraan`
---
+
+
+
 
 CREATE TABLE `cs_kendaraan` (
   `nomor` varchar(1000) NOT NULL,
@@ -119,11 +82,10 @@ CREATE TABLE `cs_kendaraan` (
   `kwitansi` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_konsumtif`
---
+
+
+
 
 CREATE TABLE `cs_konsumtif` (
   `nomor` varchar(15) NOT NULL,
@@ -141,22 +103,17 @@ CREATE TABLE `cs_konsumtif` (
   `npwp` varchar(1000) NOT NULL,
   `tespen` varchar(1000) NOT NULL,
   `tabungan` varchar(1000) NOT NULL,
-  `jaminan` varchar(1000) NOT NULL
+  `jaminan` varchar(1000) NOT NULL,
+  PRIMARY KEY (`nomor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `cs_konsumtif`
---
 
-INSERT INTO `cs_konsumtif` (`nomor`, `nama`, `suami`, `istri`, `permohonan`, `persetujuan`, `surat_kuasa`, `sk`, `slip`, `kk`, `nikah`, `kerpeg`, `npwp`, `tespen`, `tabungan`, `jaminan`) VALUES
-('465465465468', 'yusril', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', '', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf', 'CV ADITYA DWI PRAKASA.pdf'),
-('8484', 'yusril', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO cs_konsumtif VALUES
+("465465465468","yusril","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf","CV ADITYA DWI PRAKASA.pdf"),
+("8484","yusril","","","","","","","","","","","","","","");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_mk_skt`
---
+
 
 CREATE TABLE `cs_mk_skt` (
   `nomor` varchar(1000) NOT NULL,
@@ -173,11 +130,10 @@ CREATE TABLE `cs_mk_skt` (
   `pbb` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_modal`
---
+
+
+
 
 CREATE TABLE `cs_modal` (
   `nomor` varchar(1000) NOT NULL,
@@ -194,11 +150,10 @@ CREATE TABLE `cs_modal` (
   `pbb` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_pdam`
---
+
+
+
 
 CREATE TABLE `cs_pdam` (
   `nomor` varchar(1000) NOT NULL,
@@ -215,11 +170,10 @@ CREATE TABLE `cs_pdam` (
   `pbb` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_pertanian`
---
+
+
+
 
 CREATE TABLE `cs_pertanian` (
   `nomor` varchar(1000) NOT NULL,
@@ -234,11 +188,10 @@ CREATE TABLE `cs_pertanian` (
   `pertanian` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_spk`
---
+
+
+
 
 CREATE TABLE `cs_spk` (
   `nomor` varchar(1000) NOT NULL,
@@ -255,11 +208,10 @@ CREATE TABLE `cs_spk` (
   `pbb` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `cs_talangan`
---
+
+
+
 
 CREATE TABLE `cs_talangan` (
   `nomor` varchar(1000) NOT NULL,
@@ -271,11 +223,10 @@ CREATE TABLE `cs_talangan` (
   `kuitansi` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `gaji`
---
+
+
+
 
 CREATE TABLE `gaji` (
   `nip` char(11) NOT NULL,
@@ -286,21 +237,17 @@ CREATE TABLE `gaji` (
   `izin` int(11) NOT NULL,
   `alpha` int(11) NOT NULL,
   `lembur` int(11) NOT NULL,
-  `potongan` int(11) NOT NULL
+  `potongan` int(11) NOT NULL,
+  KEY `nip` (`nip`),
+  CONSTRAINT `gaji_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `gaji`
---
 
-INSERT INTO `gaji` (`nip`, `bulan`, `tahun`, `masuk`, `sakit`, `izin`, `alpha`, `lembur`, `potongan`) VALUES
-('0619681368', '01', '2021', 27, 1, 0, 0, 0, 0);
+INSERT INTO gaji VALUES
+("0619681368","01","2021","27","1","0","0","0","0");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `golongan`
---
+
 
 CREATE TABLE `golongan` (
   `kode_golongan` char(11) NOT NULL,
@@ -309,43 +256,33 @@ CREATE TABLE `golongan` (
   `t_anak` int(11) NOT NULL,
   `uang_makan` int(11) NOT NULL,
   `uang_lembur` int(11) NOT NULL,
-  `askes` int(11) NOT NULL
+  `askes` int(11) NOT NULL,
+  PRIMARY KEY (`kode_golongan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `golongan`
---
 
-INSERT INTO `golongan` (`kode_golongan`, `nama_golongan`, `t_istrisuami`, `t_anak`, `uang_makan`, `uang_lembur`, `askes`) VALUES
-('G001', 'C/01', 150000, 100000, 50000, 30000, 120000),
-('G002', 'C/02', 50000, 200000, 300000, 100000, 200000);
+INSERT INTO golongan VALUES
+("G001","C/01","150000","100000","50000","30000","120000"),
+("G002","C/02","50000","200000","300000","100000","200000");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `jabatan`
---
+
 
 CREATE TABLE `jabatan` (
   `kode_jabatan` char(11) NOT NULL,
   `nama_jabatan` varchar(20) NOT NULL,
   `gaji_pokok` int(11) NOT NULL,
-  `tunjangan` int(11) NOT NULL
+  `tunjangan` int(11) NOT NULL,
+  PRIMARY KEY (`kode_jabatan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `jabatan`
---
 
-INSERT INTO `jabatan` (`kode_jabatan`, `nama_jabatan`, `gaji_pokok`, `tunjangan`) VALUES
-('GR01', 'Back End Programmer', 2500000, 1500000),
-('GR02', 'Programmer', 300000, 100000);
+INSERT INTO jabatan VALUES
+("GR01","Back End Programmer","2500000","1500000"),
+("GR02","Programmer","300000","100000");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `klam_asuransi`
---
+
 
 CREATE TABLE `klam_asuransi` (
   `nomor` varchar(1000) NOT NULL,
@@ -353,11 +290,10 @@ CREATE TABLE `klam_asuransi` (
   `asuransi` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `pegawai`
---
+
+
+
 
 CREATE TABLE `pegawai` (
   `nip` char(11) NOT NULL,
@@ -376,22 +312,21 @@ CREATE TABLE `pegawai` (
   `jumlah_anak` int(11) NOT NULL,
   `kode_jabatan` char(11) NOT NULL,
   `kode_golongan` char(11) NOT NULL,
-  `foto` varchar(1000) NOT NULL
+  `foto` varchar(1000) NOT NULL,
+  PRIMARY KEY (`nip`),
+  KEY `kode_jabatan` (`kode_jabatan`),
+  KEY `kode_golongan` (`kode_golongan`),
+  CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`kode_golongan`) REFERENCES `golongan` (`kode_golongan`),
+  CONSTRAINT `pegawai_ibfk_2` FOREIGN KEY (`kode_jabatan`) REFERENCES `jabatan` (`kode_jabatan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `pegawai`
---
 
-INSERT INTO `pegawai` (`nip`, `nama_pegawai`, `ttl`, `jenis`, `agama`, `negara`, `status`, `alamat`, `telp`, `email`, `formal`, `non_formal`, `pengalaman`, `jumlah_anak`, `kode_jabatan`, `kode_golongan`, `foto`) VALUES
-('0619681368', 'Toni ', 'sukamara, 14 mei 1998', 'laki-laki', 'islam', 'indonesia        ', 'Menikah', 'sukamara', '081250173', 'muhammad.yusril.mahndr@gmail.com        ', 'hgwhug', 'hufeuowhfou', 'fewoihoiwh', 1, 'GR01', 'G001', 'LN 2.jpg'),
-('123123', '123', '123', '123123', '123123', '123123  ', 'Belum Menikah', '124', '234', 'sdfsdfs  ', 'fsdfsd', 'sdfsdf', 'sdfsdf', 0, 'GR01', 'G001', '19639286.jpg');
+INSERT INTO pegawai VALUES
+("0619681368","Toni ","sukamara, 14 mei 1998","laki-laki","islam","indonesia        ","Menikah","sukamara","081250173","muhammad.yusril.mahndr@gmail.com        ","hgwhug","hufeuowhfou","fewoihoiwh","1","GR01","G001","LN 2.jpg"),
+("123123","123","123","123123","123123","123123  ","Belum Menikah","124","234","sdfsdfs  ","fsdfsd","sdfsdf","sdfsdf","0","GR01","G001","19639286.jpg");
 
--- --------------------------------------------------------
 
---
--- Table structure for table `pelunasan_kredit`
---
+
 
 CREATE TABLE `pelunasan_kredit` (
   `nomor` varchar(1000) NOT NULL,
@@ -399,88 +334,23 @@ CREATE TABLE `pelunasan_kredit` (
   `serah_terima` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
---
--- Table structure for table `user`
---
+
+
+
 
 CREATE TABLE `user` (
   `kode_user` char(11) NOT NULL,
   `nama_user` varchar(50) NOT NULL,
   `password` varchar(30) NOT NULL,
   `level` varchar(15) NOT NULL,
-  `foto` varchar(255) NOT NULL
+  `foto` varchar(255) NOT NULL,
+  PRIMARY KEY (`kode_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user`
---
 
-INSERT INTO `user` (`kode_user`, `nama_user`, `password`, `level`, `foto`) VALUES
-('U001', 'admin', 'admin', 'Admin', 'user-lg.jpg'),
-('U002', 'rizki', 'asd', 'Admin', 'LN 2.jpg');
+INSERT INTO user VALUES
+("U001","admin","admin","Admin","user-lg.jpg"),
+("U002","rizki","asd","Admin","LN 2.jpg");
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `cs_konsumtif`
---
-ALTER TABLE `cs_konsumtif`
-  ADD PRIMARY KEY (`nomor`);
-
---
--- Indexes for table `gaji`
---
-ALTER TABLE `gaji`
-  ADD KEY `nip` (`nip`);
-
---
--- Indexes for table `golongan`
---
-ALTER TABLE `golongan`
-  ADD PRIMARY KEY (`kode_golongan`);
-
---
--- Indexes for table `jabatan`
---
-ALTER TABLE `jabatan`
-  ADD PRIMARY KEY (`kode_jabatan`);
-
---
--- Indexes for table `pegawai`
---
-ALTER TABLE `pegawai`
-  ADD PRIMARY KEY (`nip`),
-  ADD KEY `kode_jabatan` (`kode_jabatan`),
-  ADD KEY `kode_golongan` (`kode_golongan`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`kode_user`);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `gaji`
---
-ALTER TABLE `gaji`
-  ADD CONSTRAINT `gaji_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`);
-
---
--- Constraints for table `pegawai`
---
-ALTER TABLE `pegawai`
-  ADD CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`kode_golongan`) REFERENCES `golongan` (`kode_golongan`),
-  ADD CONSTRAINT `pegawai_ibfk_2` FOREIGN KEY (`kode_jabatan`) REFERENCES `jabatan` (`kode_jabatan`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

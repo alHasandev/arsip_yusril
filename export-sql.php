@@ -4,13 +4,13 @@
 $hostname      = "localhost";
 $username      = "root";
 $password      = "";
-$dbname        = "koperasi";
-$backup_name   = "koperasi.sql";
+$dbname        = @$_GET['dbname'] ? $_GET['dbname'] : "test";
+$backup_name   = @$_GET['backup_name'];
 $tables        = false; // set false to export all tables
 
 //or add 5th parameter(array) of specific tables:    array("mytable1","mytable2","mytable3") for multiple tables
 
-Export_Database($hostname, $username, $password, $dbname,  $tables = false, $backup_name = false);
+Export_Database($hostname, $username, $password, $dbname,  $tables, $backup_name);
 
 function Export_Database($host, $user, $pass, $name,  $tables = false, $backup_name = false)
 {
