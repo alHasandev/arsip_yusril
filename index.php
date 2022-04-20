@@ -3,7 +3,7 @@
 
     session_start();
 
-    $koneksi = new mysqli("localhost", "root", "", "pt_baktiputra");
+    require_once "koneksi.php";
 
     if ($_SESSION['Admin'] || $_SESSION['Pimpinan']) {
 
