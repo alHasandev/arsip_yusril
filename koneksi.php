@@ -3,7 +3,7 @@
 require_once "vendor/autoload.php";
 
 $host = "localhost";
-$username = @$_ENV['USERNAME'] ? $_ENV['USERNAME'] : "root";
+$username = "root";
 $password = "";
 $dbname =  "pt_baktiputra";
 
