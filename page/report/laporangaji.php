@@ -1,7 +1,6 @@
 <?php
 
 include "../../koneksi.php";
-require_once '../../vendor/autoload.php';
 require_once '../../my_mpdf/MyMPDF.php';
 
 date_default_timezone_set('Asia/Jakarta');
