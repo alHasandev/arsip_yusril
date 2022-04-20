@@ -442,8 +442,8 @@
           <div class="container-fluid">
             <div class="block-header">
               <?php
-              $page = $_GET['page'];
-              $aksi = $_GET['aksi'];
+              $page = @$_GET['page'];
+              $aksi = @$_GET['aksi'];
 
               if ($page == "admin") {
                 if ($aksi == "") {
