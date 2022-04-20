@@ -1,25 +1,22 @@
 <?php
-        ob_start();
-        session_start();
+require_once "koneksi.php";
+ob_start();
+session_start();
 
-        error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
-        $koneksi= new mysqli("localhost", "root", "", "pt_baktiputra");
+$_SESSION["admin"] = null;
 
-        $_SESSION["admin"]=null;
-
-        if ($_SESSION['Admin'] || $_SESSION['Pimpinan']) {
-            header("location:index.php");
-        }else{
-            
-        
+if ($_SESSION['Admin'] || $_SESSION['Pimpinan']) {
+  header("location:index.php");
+} else {
 
 ?>
 
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>BANK ARTHA SUKAMARA</title>
@@ -41,46 +38,47 @@
 
     <!-- Custom Css -->
     <link href="css/style.css" rel="stylesheet">
-</head>
+  </head>
 
-<body class="login-page">
+  <body class="login-page">
     <div class="login-box">
-        <div class="logo">
-            <a href="javascript:void(0);"></a>
-        </div>
-        <div class="card">
-            <div class="body">
-                <form id="sign_in" method="POST">
-                    <div class="msg"><h3><big>BANK ARTHA SUKAMARA </big></h4>
-                    </div>
-                     <img src="images/BPR.PNG" width="300px" height="200px" alt="User" />
-                     <br><br><br>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">account_circle</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">lock</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-xs-4">
-                            <input type="submit" name="login" class="btn btn-block bg-pink waves-effect" Value="Login">
-                        </div>
-                    </div>
-                    
-                </form>
+      <div class="logo">
+        <a href="javascript:void(0);"></a>
+      </div>
+      <div class="card">
+        <div class="body">
+          <form id="sign_in" method="POST">
+            <div class="msg">
+              <h3><big>BANK ARTHA SUKAMARA </big></h4>
             </div>
+            <img src="images/BPR.PNG" width="300px" height="200px" alt="User" />
+            <br><br><br>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">account_circle</i>
+              </span>
+              <div class="form-line">
+                <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+              </div>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">lock</i>
+              </span>
+              <div class="form-line">
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-xs-4">
+                <input type="submit" name="login" class="btn btn-block bg-pink waves-effect" Value="Login">
+              </div>
+            </div>
+
+          </form>
         </div>
+      </div>
     </div>
 
     <!-- Jquery Core Js -->
@@ -98,15 +96,15 @@
     <!-- Custom Js -->
     <script src="js/admin.js"></script>
     <script src="js/pages/examples/sign-in.js"></script>
-</body>
+  </body>
 
-</html>
-<?php
+  </html>
+  <?php
 
   if (isset($_POST['login'])) {
 
     $username = $_POST['username'];
-    $password=$_POST['password'];
+    $password = $_POST['password'];
 
     $sql = $koneksi->query("select * from user where nama_user='$username' and password='$password'");
 
@@ -114,7 +112,7 @@
 
     $data = $sql->fetch_assoc();
 
-    if ($ketemu >=1) {
+    if ($ketemu >= 1) {
 
       session_start();
 
@@ -124,29 +122,25 @@
         $_SESSION['Admin'] = $data['nama_user'];
 
         header("location:index.php");
+      } else if ($data['level'] == "Pimpinan") {
 
+        $_SESSION['Pimpinan'] = $data['nama_user'];
 
-        }else if ($data['level'] == "Pimpinan") {
+        header("location:indexguru.php");
+      } else {
+  ?>
 
-            $_SESSION['Pimpinan'] = $data['nama_user'];
-    
-            header("location:indexguru.php");
-        
-    }else{
-        ?>
-    
         <script type="text/javascript">
           alert("Login Gagal Username atau Password yang Anda Masukan Salah")
         </script>
-    
-        <?php
+
+  <?php
+      }
     }
-}
+  }
 
-}
-
-?>
+  ?>
 
 <?php
-        }
+}
 ?>
