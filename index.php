@@ -1,5 +1,5 @@
     <?php
-    error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+    // error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
     session_start();
 
@@ -597,6 +597,168 @@
           </div>
         </section>
 
+        <div class="modal fade" id="smallModal1" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="smallModalLabel">Lembur Pegawai</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="page/laporan/laporanlembur.php">
+
+
+                  <label>Bulan</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
+                    </div>
+                  </div>
+
+                  <label>Tahun</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Print</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="smallModal2" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="smallModalLabel">Kehadiran Pegawai</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="page/laporan/laporankehadiran.php">
+                  <label>Bulan</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
+                    </div>
+                  </div>
+
+                  <label>Tahun</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Print</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="smallModal3" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="smallModalLabel">Potongan Gaji Pegawai</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="page/laporan/laporanpotongan.php">
+
+
+                  <label>Bulan</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
+                    </div>
+                  </div>
+
+                  <label>Tahun</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Print</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="smallModal4" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="smallModalLabel">Slip Gaji Pegawai</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="page/laporan/slipgaji.php">
+
+
+                  <label>NIP</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="nip" class="form-control" placeholder="Masukkan NIP" required />
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Print</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="smallModal5" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="smallModalLabel">Gaji Pegawai</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="page/laporan/laporangaji.php">
+
+
+                  <label>Bulan</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
+                    </div>
+                  </div>
+
+                  <label>Tahun</label>
+                  <div class="form-group">
+                    <div class="form-line">
+                      <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Print</button>
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <!-- Jquery Core Js -->
         <script src="plugins/jquery/jquery.min.js"></script>
 
@@ -658,173 +820,6 @@
 
     <?php
     } else {
-
       header("location:login.php");
     }
-
-
     ?>
-
-    <div class="modal fade" id="smallModal1" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="smallModalLabel">Lembur Pegawai</h4>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="page/laporan/laporanlembur.php">
-
-
-              <label>Bulan</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
-                </div>
-              </div>
-
-              <label>Tahun</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
-                </div>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary waves-effect">Print</button>
-            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="modal fade" id="smallModal2" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="smallModalLabel">Kehadiran Pegawai</h4>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="page/laporan/laporankehadiran.php">
-
-
-              <label>Bulan</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
-                </div>
-              </div>
-
-              <label>Tahun</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
-                </div>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary waves-effect">Print</button>
-            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="smallModal3" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="smallModalLabel">Potongan Gaji Pegawai</h4>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="page/laporan/laporanpotongan.php">
-
-
-              <label>Bulan</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
-                </div>
-              </div>
-
-              <label>Tahun</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
-                </div>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary waves-effect">Print</button>
-            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="smallModal4" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="smallModalLabel">Slip Gaji Pegawai</h4>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="page/laporan/slipgaji.php">
-
-
-              <label>NIP</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="nip" class="form-control" placeholder="Masukkan NIP" required />
-                </div>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary waves-effect">Print</button>
-            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="smallModal5" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="smallModalLabel">Gaji Pegawai</h4>
-          </div>
-          <div class="modal-body">
-            <form method="POST" action="page/laporan/laporangaji.php">
-
-
-              <label>Bulan</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="bulan" class="form-control" placeholder="Masukkan Bulan EX : 01" required />
-                </div>
-              </div>
-
-              <label>Tahun</label>
-              <div class="form-group">
-                <div class="form-line">
-                  <input type="text" name="tahun" class="form-control" placeholder="Masukkan Tahun EX : 2020" required />
-                </div>
-              </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary waves-effect">Print</button>
-            <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Kembali</button>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
