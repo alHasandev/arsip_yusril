@@ -2,6 +2,10 @@
 
 // Mapping jenis laporan
 $reports = [
+  "kk" => [
+    "pdf" => "page/report/laporankk.php",
+    "judul" => "Laporan Kartu Keluarga Pegawai"
+  ],
   "gaji" => [
     "pdf" => "page/report/laporangaji.php",
     "judul" => "Laporan Gaji Pegawai"
