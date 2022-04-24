@@ -243,6 +243,12 @@
                     </a>
                     <ul class="ml-menu">
                       <li>
+                        <a href="?page=report_batch">LAPORAN BERKAS PEGAWAI (BATCH)</a>
+                      </li>
+                      <li>
+                        <a href="?page=report&laporan=kk">LAPORAN KK PEGAWAI</a>
+                      </li>
+                      <li>
                         <a href="?page=report&laporan=gaji">LAPORAN GAJI PEGAWAI</a>
                       </li>
                     </ul>
@@ -579,13 +585,10 @@
                 if ($aksi == "") {
                   include "page/report/report.php";
                 }
-                // elseif ($aksi == "tambah") {
-                //     include "page/kehadiran/tambah.php";
-                // } elseif ($aksi == "ubah") {
-                //     include "page/kehadiran/ubah.php";
-                // } elseif ($aksi == "hapus") {
-                //     include "page/kehadiran/hapus.php";
-                // }
+              } elseif ($page == "report_batch") {
+                if ($aksi == "") {
+                  include "page/report/report_batch.php";
+                }
               } elseif ($page == "") {
                 include "home.php";
               }
